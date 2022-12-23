@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/editAnyKey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Analytics Key"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editAnyValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Analytics Value"
+        android:inputType="text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/buttonAnyQueue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Queue Analytics" />
+
+        <Button
+            android:id="@+id/buttonAnyReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reset Analytics" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonAnyReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Report Analytics" />
+
+</LinearLayout>

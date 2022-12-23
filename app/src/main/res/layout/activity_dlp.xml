@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sample.framework.ui.DLPActivity">
+
+    <TextView
+        android:id="@+id/txt_uri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test Uri Path:" />
+
+    <EditText
+        android:id="@+id/edit_uri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_uri"
+        android:text="https://www.google.com" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_uri"
+        android:id="@+id/btn_uri"
+        android:onClick="openUri"
+        android:text="Open Uri" />
+
+    <TextView
+        android:id="@+id/txt_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_uri"
+        android:text="Test File Path:" />
+
+    <EditText
+        android:id="@+id/edit_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_file"
+        android:text="/sdcard/download/02939302.pdf" />
+    <Button android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_file"
+        android:id="@+id/choose_file"
+        android:onClick="chooseFile"
+        android:text="Choose ..."
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choose_file"
+        android:onClick="openFile"
+        android:text="Open" />
+
+
+
+</RelativeLayout>

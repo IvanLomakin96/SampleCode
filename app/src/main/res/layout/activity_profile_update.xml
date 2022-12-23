@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <EditText 
+        android:id="@+id/editTextProfileType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="com.airwatch.android.agent.settings" />
+    
+    <EditText 
+        android:id="@+id/editTextUUIDProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="UUID of profile to fetch" />
+
+    <Button
+        android:id="@+id/buttonGetProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Profile Group"
+        android:layout_gravity="center_horizontal"
+        android:onClick="getProfileOnClick"/>
+    
+    <Button
+        android:id="@+id/registerProfileListener"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Register For Profile Type Updates"
+        android:onClick="registerProfileListenerOnClick" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true" >
+
+        <TextView
+            android:id="@+id/textProfiles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Profile"/>
+
+    </ScrollView>
+
+
+</LinearLayout>

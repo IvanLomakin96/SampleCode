@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:airwatch="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.airwatch.ui.widget.AWEditText
+        android:id="@+id/createpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/awsdk_dialog_text_size_medium"
+        android:hint="create passcode"
+         />
+
+    <com.airwatch.ui.widget.AWEditText
+        android:id="@+id/confirmpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/awsdk_dialog_text_size_medium"
+        android:layout_marginTop="20dp"
+        android:hint="confirm passcode" />
+
+    <com.airwatch.ui.widget.AWCheckBox
+        android:id="@+id/showPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/awsdk_dialog_text_size_medium"
+        android:text="Show Password"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

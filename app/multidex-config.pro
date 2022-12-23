@@ -1,0 +1,2 @@
+-keep public class java.lang.Iterable {*;}
+-keep public class java.util.Map {*;}

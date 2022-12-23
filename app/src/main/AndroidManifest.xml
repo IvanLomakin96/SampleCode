@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sample.airwatchsdk"
+    android:versionCode="11" >
+
+    <uses-sdk tools:overrideLibrary="com.airwatch.core, android.support.v13, com.airwatch.privacy, androidx.security" />
+
+    <uses-permission android:name="com.airwatch.sdk.BROADCAST" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" tools:node="remove"/>
+
+
+    <application
+        android:name=".AirWatchSDKSampleApp"
+        android:allowBackup="false"
+        android:icon="${appIcon}"
+        android:label="@string/app_name"
+        android:theme="${appTheme}"
+        tools:replace="android:theme, android:networkSecurityConfig"
+        android:networkSecurityConfig="@xml/network_config">
+
+        <meta-data android:name="io.fabric.ApiKey" android:value="191cc602b67341f5d1acad38dfa4ff76ca3139bc" />
+        <meta-data android:name="commonIdentity" android:value="true"/>
+        <meta-data android:name="mixpanel" android:value="true"/>
+        <meta-data android:name="com.airwatch.certpinning.strict" tools:replace="android:value" android:value="${certificatePinningStrict}"/>
+        <meta-data android:name="com.airwatch.certpinning.refresh.interval" android:value="${certificatePinningRefreshInterval}"/>
+        <meta-data android:name="com.airwatch.certpinning.refresh.interval.unit" android:value="${certificatePinningRefreshIntervalUnit}"/>
+        <meta-data android:name="com.airwatch.sample.enable.leakcanary" android:value="${enableLeakCanary}"/>
+        <meta-data android:name="enableOcspForDS" android:value="true"/>
+        <meta-data android:name="scepEnable" android:value="true"/>
+        <meta-data android:name="enableSDKTrustStore" android:value="true"/>
+        <meta-data android:name="enableTunnelSDK" android:value="true" />
+        <meta-data android:name="enableCompliance" android:value="true" />
+
+        <activity
+            android:name="com.airwatch.gateway.ui.GatewaySplashActivity"
+            android:label="@string/app_name"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sample.framework.ui.ComplianceCheckActivity"/>
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/title_activity_client_sdk" >
+        </activity>
+        <activity
+            android:name=".ui.SDKAuthentication"
+            android:label="@string/title_activity_sdk_authentication" >
+        </activity>
+        <activity
+            android:name=".ui.SDKPasscode"
+            android:label="@string/title_activity_sdk_passcode" >
+        </activity>
+        <activity
+            android:name=".ui.SDKCertificateManagement"
+            android:label="@string/title_activity_sdk_certificate_mgmt" >
+        </activity>
+        <activity
+            android:name=".ui.SDKAnalytics"
+            android:label="@string/title_activity_sdk_analytics" >
+        </activity>
+        <activity
+            android:name=".ui.SDKClearAppData"
+            android:label="@string/title_activity_sdk_clear_appdata_test" >
+        </activity>
+        <activity
+            android:name=".ui.SDKSSOSessionInfo"
+            android:label="@string/title_activity_sdk_sso_session_info" >
+        </activity>
+        <activity
+            android:name=".ui.SDKSecureAppInfo"
+            android:label="@string/title_activity_sdk_secure_app_info" >
+        </activity>
+        <activity
+            android:name=".ui.SDKProfileUpdates"
+            android:label="@string/title_activity_sdk_profile_group_updates" />
+        <activity
+            android:name=".ui.SDKFactoryReset"
+            android:label="@string/title_activity_sdk_factory_reset_device" >
+        </activity>
+        <activity
+            android:name=".ui.SDKRemoveProfileGroup"
+            android:label="@string/title_activity_sdk_remove_profile" >
+        </activity>
+        <activity
+            android:name=".ui.SDKRebootDevice"
+            android:label="@string/title_activity_sdk_reboot_device" >
+        </activity>
+        <activity
+            android:name=".ui.SDKGetAppKeys"
+            android:label="@string/title_activity_sdk_app_public_key" >
+        </activity>
+        <activity
+            android:name=".ui.SDKLogging"
+            android:label="@string/title_activity_sdk_logging" >
+        </activity>
+        <activity
+            android:name=".ui.SDKManagerAPIs"
+            android:label="@string/title_activity_sdk_manager_apis">
+        </activity>
+
+        <activity android:name=".ui.SDKAppConfigActivity"
+            android:label="@string/title_activity_sdk_application_configuration"/>
+        <activity android:name="com.sample.framework.ui.AWClientExampleActivity"/>
+
+        <activity
+            android:name="com.sample.main.MainLandingActivity"
+            android:label="@string/title_activity_main_landing" >
+        </activity>
+        <activity
+            android:name="com.sample.framework.ui.FrameWorkMainActivity"
+            android:label="@string/title_activity_fram_work_main"
+            android:parentActivityName="com.sample.main.MainLandingActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sample.main.MainLandingActivity" />
+        </activity>
+        <activity
+            android:name="com.sample.privacy.PrivacyMainActivity"
+            android:label="@string/title_activity_privacy_main"
+            android:parentActivityName="com.sample.main.MainLandingActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.sample.main.MainLandingActivity" />
+        </activity>
+        <activity
+            android:name="com.sample.framework.ui.FWKeyManager"
+            android:label="@string/title_activity_fwkey_manager" >
+        </activity>
+        <activity
+            android:name="com.sample.framework.ui.FWFileKeyManager"
+            android:label="@string/title_activity_fw_filekey_manager" >
+        </activity>
+        <activity
+            android:name="com.sample.framework.ui.FWAppSecurePreferences"
+            android:label="@string/title_activity_fwsecure_preferences" >
+        </activity>
+        <activity
+            android:name="com.sample.framework.ui.ProxyTestActivity"
+            android:label="@string/title_activity_fwmagweb_view" >
+        </activity>
+        <activity
+            android:name="com.sample.framework.ui.FWMAGHttpClients"
+            android:label="@string/title_activity_fwmaghttp_clients" >
+        </activity>
+        <activity
+            android:name="com.sample.framework.ui.SplashSDKServiceInitActivity"
+            android:label="@string/title_activity_splash_sdkservice_init" >
+        </activity>
+        <activity
+            android:name="com.sample.framework.ui.SDKConfigurationFetch"
+            android:label="@string/title_activity_sdkconfiguration_fetch" >
+        </activity>
+        <activity
+            android:name="com.sample.framework.ui.FWSDKSecurePreferences"
+            android:label="@string/title_activity_fwsdksecure_preferences" >
+        </activity>
+        <activity
+            android:name="com.sample.framework.ui.framework_ui.FrameWorkUIMainActivity"
+            android:label="@string/title_activity_framework_ui"
+            android:parentActivityName="com.sample.framework.ui.FrameWorkMainActivity">
+        </activity>
+        <activity
+            android:name="com.sample.framework.ui.framework_ui.UIElements"
+            android:label="@string/title_activity_ui_elements"
+            android:parentActivityName="com.sample.framework.ui.framework_ui.FrameWorkUIMainActivity">
+        </activity>
+        <activity
+            android:name="com.sample.framework.ui.framework_ui.AirWatchTextViewDemo"
+            android:label="@string/title_activity_airwatch_text_view_demo"
+            android:parentActivityName="com.sample.framework.ui.framework_ui.UIElements">
+        </activity>
+        <activity
+            android:name="com.sample.framework.ui.framework_ui.AirWatchEditTextDemo"
+            android:label="@string/title_activity_airwatch_edit_text_demo"
+            android:parentActivityName="com.sample.framework.ui.framework_ui.UIElements">
+        </activity>
+        <activity
+            android:name="com.sample.framework.ui.framework_ui.AirWatchAutoCompleteTextViewDemo"
+            android:label="@string/title_activity_airwatch_auto_complete_text_view_demo"
+            android:parentActivityName="com.sample.framework.ui.framework_ui.UIElements">
+        </activity>
+        <activity
+            android:name="com.sample.framework.ui.framework_ui.AirWatchButtonDemo"
+            android:label="@string/title_activity_airwatch_button_demo"
+            android:parentActivityName="com.sample.framework.ui.framework_ui.UIElements">
+        </activity>
+        <activity
+            android:name="com.sample.framework.ui.framework_ui.AirWatchCheckBoxDemo"
+            android:label="@string/title_activity_airwatch_check_box_demo"
+            android:parentActivityName="com.sample.framework.ui.framework_ui.UIElements">
+        </activity>
+        <activity android:name="com.airwatch.ui.activity.OpenSourceLicenseActivity" />
+        <activity android:name="com.sample.framework.ui.framework_ui.QRCodeScanner" />
+
+        <activity
+            android:name="com.sample.framework.ui.oemservice.list.ListMethodsActivity"
+            android:label="@string/title_activity_list_methods" >
+        </activity>
+        <activity
+            android:name="com.sample.framework.ui.oemservice.invoke.InvokeMethodActivity"
+            android:label="@string/title_activity_invoke_method" >
+        </activity>
+        <activity
+            android:name="com.sample.framework.ui.framework_ui.NetworkUtils"
+            android:label="@string/title_activity_network_utils_demo" >
+        </activity>
+        <activity
+            android:name="com.sample.framework.ui.ProxyActivityAWWebView2"
+            android:label="@string/title_activity_proxy2" >
+        </activity>
+        <activity
+            android:name="com.sample.framework.ui.IntegratedAuthActivity">
+        </activity>
+        <activity android:name=".ui.SDKAutoEnroll"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity android:name="com.sample.framework.ui.UniqueIdActivity"/>
+        <activity android:name=".ui.SDKManagedChainActivity"/>
+        <activity android:name="com.sample.framework.ui.PushNotificationsActivity"/>
+        <activity android:name="com.sample.settings.CustomSettingsActivity"/>
+        <activity android:name="com.sample.framework.ui.DLPActivity"></activity>
+        <activity android:name="com.sample.framework.ui.MDMStatusV2Activity"></activity>
+        <activity
+            android:name="com.sample.framework.ui.SSLPinningStatusActivity"
+            android:label="@string/title_activity_sslpinning_status"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name="com.sample.framework.ui.RevocationCheckActivity"/>
+        <activity android:name="com.sample.framework.ui.RootStatus" />
+        <activity android:name="com.sample.framework.ui.MutualTLSActivity"
+            android:label="@string/title_activity_mutual_tls"/>
+
+        <activity android:name="com.sample.framework.ui.AppPermissionActivity"
+            android:label="@string/title_activity_app_permission"/>
+
+        <receiver
+            android:name="com.airwatch.sdk.AirWatchSDKBroadcastReceiver"
+            android:permission="com.airwatch.sdk.BROADCAST"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="${applicationId}.airwatchsdk.BROADCAST" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.airwatch.intent.action.APPLICATION_CONFIGURATION_CHANGED" />
+                <data android:scheme="app" android:host="com.sample.airwatchsdk" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_CHANGED" />
+                <action android:name="android.intent.action.PACKAGE_RESTARTED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+
+        <service android:name="com.sample.framework.logs.LoggerService" />
+        <service android:name="com.airwatch.proxy.LocalProxyService" />
+        <service android:name="${applicationId}.AirWatchSDKContextService"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="${applicationId}.AirWatchSDKIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service
+            android:name="com.airwatch.sdk.AppIconHideService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service
+            android:name="com.sample.notification.FCMMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

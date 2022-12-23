@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sample.framework.ui.MDMStatusV2Activity">
+
+    <TextView
+        android:id="@+id/txt_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="request code" />
+
+    <EditText
+        android:id="@+id/edit_request_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_request"
+        android:text="5" />
+
+    <TextView
+        android:id="@+id/txt_device_udid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_request_code"
+        android:text="Device udid" />
+
+    <EditText
+        android:id="@+id/edit_device_udid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_device_udid"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/txt_og"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Group ID"
+        android:layout_below="@+id/edit_device_udid"
+        />
+
+    <EditText
+        android:id="@+id/edit_og"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_og"
+        android:hint="Group ID" />
+
+    <TextView
+        android:id="@+id/txt_host"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="host"
+        android:layout_below="@+id/edit_og"
+        />
+
+    <EditText
+        android:id="@+id/edit_host"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_host"
+        android:hint="Group ID" />
+
+    <TextView
+        android:id="@+id/txt_hmac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hmac"
+        android:layout_below="@+id/edit_host"
+        />
+
+    <EditText
+        android:id="@+id/edit_hmac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_hmac"
+        android:hint="hmac" />
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_fetch_og"
+        android:layout_below="@+id/edit_hmac"
+        android:onClick="requestStatus"
+        android:text="request" />
+
+    <TextView
+        android:id="@+id/txt_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="result:"
+        android:layout_below="@+id/button_fetch_og"
+        />
+
+
+
+</RelativeLayout>

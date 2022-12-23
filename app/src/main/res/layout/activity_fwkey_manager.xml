@@ -1,0 +1,48 @@
+<!--
+  ~ Copyright (c) 2015 AirWatch, LLC. All rights reserved.
+  ~ This product is protected by copyright and intellectual property laws in
+  ~ the United States and other countries as well as by international treaties.
+  ~ AirWatch products may be covered by one or more patents listed at
+  ~ http://www.vmware.com/go/patents.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <EditText
+        android:id="@+id/et_encrypt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Text To Be Encrypted" />
+
+    <Button
+        android:id="@+id/btn_encrypt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Encrypt"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/tv_encrypt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_decrypt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Decrypt"
+        android:onClick="onClick"/>
+
+    <TextView
+        android:id="@+id/tv_decrypt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

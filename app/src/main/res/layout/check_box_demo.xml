@@ -1,0 +1,59 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:airwatch="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="366dp"
+        android:orientation="vertical" >
+
+        <requestFocus />
+
+        <CheckBox
+            android:id="@+id/checkBoxDefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Default Font:Check"
+            android:textSize="20dp" />
+
+        <com.airwatch.ui.widget.AWCheckBox
+            android:id="@+id/checkBoxRobotoRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            airwatch:awsdkFontStyle="regular"
+            android:text="Roboto Regular:Check"
+            android:textSize="20dp" />
+
+        <com.airwatch.ui.widget.AWCheckBox
+            android:id="@+id/checkBoxRobotoLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            airwatch:awsdkFontStyle="light"
+            android:text="Roboto Light:Check"
+            android:textSize="20dp" />
+
+        <com.airwatch.ui.widget.AWCheckBox
+            android:id="@+id/checkBoxRobotoMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            airwatch:awsdkFontStyle="medium"
+            android:text="Roboto Medium:Check"
+            android:textSize="20dp" />
+
+        <com.airwatch.ui.widget.AWCheckBox
+            android:id="@+id/checkBoxRobotoBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            airwatch:awsdkFontStyle="bold"
+            android:text="Roboto Bold:Check"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+</ScrollView>

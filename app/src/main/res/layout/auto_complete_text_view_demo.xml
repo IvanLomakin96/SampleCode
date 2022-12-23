@@ -1,0 +1,59 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:airwatch="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="366dp"
+        android:orientation="vertical" >
+
+        <requestFocus />
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteDefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:ems="10"
+            android:hint="Default Font" />
+
+        <com.airwatch.ui.widget.AWAutoCompleteTextView
+            android:id="@+id/autoCompleteRobotoRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            airwatch:awsdkFontStyle="regular"
+            android:ems="10"
+            android:hint="Roboto Regular" />
+
+        <com.airwatch.ui.widget.AWAutoCompleteTextView
+            android:id="@+id/autoCompleteRobotoLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            airwatch:awsdkFontStyle="light"
+            android:ems="10"
+            android:hint="Roboto Light" />
+
+        <com.airwatch.ui.widget.AWAutoCompleteTextView
+            android:id="@+id/autoCompleteRobotoMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            airwatch:awsdkFontStyle="medium"
+            android:ems="10"
+            android:hint="Roboto Medium" />
+
+        <com.airwatch.ui.widget.AWAutoCompleteTextView
+            android:id="@+id/autoCompleteRobotoBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            airwatch:awsdkFontStyle="bold"
+            android:ems="10"
+            android:hint="Roboto Bold" />
+    </LinearLayout>
+
+</ScrollView>

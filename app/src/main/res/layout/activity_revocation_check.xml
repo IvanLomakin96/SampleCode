@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2018 AirWatch, LLC. All rights reserved.
+  ~ This product is protected by copyright and intellectual property laws in  the United States
+  ~ and other countries as well as by international treaties.
+  ~ AirWatch products may be covered by one or more patents listed at
+  ~ http://www.vmware.com/go/patents.
+  -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.sample.framework.ui.RevocationCheckActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="Check Type" />
+
+            <ToggleButton
+                android:id="@+id/checkTypeToggle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="ToggleButton"
+                android:textOff="Leaf"
+                android:textOn="Chain" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="Strictness" />
+
+            <Spinner
+                android:id="@+id/strictnessSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="Enforce nonce" />
+
+            <ToggleButton
+                android:id="@+id/nonceToggle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="ToggleButton"
+                android:textOff="Disabled"
+                android:textOn="Enabled" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="Trust Store" />
+
+            <ToggleButton
+                android:id="@+id/trustStoreToggle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="ToggleButton"
+                android:textOff="SDK"
+                android:textOn="SDK+Device" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="Use AIA" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="OCSP url" />
+
+            <EditText
+                android:id="@+id/ocspUrlEt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:hint="Responder url" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/tlsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set TLS config" />
+
+        <Button
+            android:id="@+id/smimeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set SMIME config" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use below to test SMIME certs" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/certNameTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="Select cert" />
+
+            <Button
+                android:id="@+id/fileOpenButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="Open" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/doCheckButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Do revocation check" />
+
+        <Button
+            android:id="@+id/doSettingsFetch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fetch SDK Settings" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/urlTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:text="Url to hit" />
+
+            <EditText
+                android:id="@+id/hitUrlEt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:hint="Enter url"
+                android:text="" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/hitUrlButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hit URL" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_last_revocation_response"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

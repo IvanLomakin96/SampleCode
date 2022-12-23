@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="menu_settings">Settings</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_change_passcode">Change Passcode</string>
+    <string name="menu_sendApplicationLogs">Send App Logs</string>
+    <string name="menu_home">Home</string>
+
+    <string name="singlesignon">Single Sign On</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="passcode">Passcode</string>
+    <string name="confirm_passcode">Confirm Passcode</string>
+
+    <string name="login_dailog_message">Please enter the Credentials</string>
+    <string name="login_dailog_message_passcode">Please enter the Passcode</string>
+    <string name="set_passcode_dailog_message">Please set a Passcode</string>
+
+    <string name="login_action">Login</string>
+    <string name="submit_action">Submit</string>
+    <string name="cancel_action">Cancel</string>
+    <string name="done_action">Done</string>
+    <string name="confirm_action">Confirm</string>
+    <string name="ok_action">OK</string>
+
+    <string name="empty"></string>
+    <string name="loading_wait">Please wait!!</string>
+
+    <string name="warning">Warning!!</string>
+    <string name="remaining_grace_period">Remaining grace period in seconds : </string>
+    <string name="warn_reset_sso_activation">This will reset the SSO Activation state and makes everything back to the initial state.\nDo you wish to proceed??</string>
+
+    <string name="toast_msg_passcode_no_match">Passcodes do not match!!\nPlease enter again</string>
+    <string name="toast_msg_passcode_reset_success">Passcode reset successfully</string>
+    <string name="toast_msg_passcode_setting">Setting Passcode : </string>
+    <string name="toast_msg_reset_active_state">Resetting Activation State : </string>
+    <string name="toast_msg_invalid_credentials">Invalid credentials!!\nPlease enter again</string>
+    <string name="toast_msg_passcode_authentication">Passcode Authentication : </string>
+    <string name="toast_msg_authentication">Authentication : </string>
+    <string name="toast_msg_session_created">Created a new SSO Session</string>
+    <string name="toast_msg_send_log_unavailable">Send logs unavailable in standalone mode</string>
+    <string name="toast_msg_send_log_success">Logs sent</string>
+    <string name="toast_msg_log_file_empty">Log file is empty.</string>
+    <string name="anchor_app_status">Status of the Anchor App</string>
+    <string name="anchor_app_dnd_status">DND Status : </string>
+    <string name="anchor_app_exit_mode">Exit Mode : </string>
+
+    <string name="integrated_authentication_title">Details of Integrated Authentication</string>
+    <string name="int_auth_status">Status : </string>
+    <string name="int_auth_domains">Domains supported :</string>
+
+    <string name="permlab_sdk_broadcast">Send/receive SDK broadcast</string>
+    <string name="permdesc_sdk_broadcast">Allows an application to send or receive SDK broadcasts.</string>
+
+    <string name="custom_settings_title">Custom Settings</string>
+    <string name="fetch_custom_settings">Fetch Custom Settings </string>
+    <string name="custom_settings_defined">Custom Settings defined for this app :</string>
+
+    <string name="logging_title">Logging Demo</string>
+    <string name="label_logging_level">Logging level :</string>
+    <string name="label_logging_message">Log Message :</string>
+
+    <string name="authentication_type">Authentication Type :</string>
+    <string name="grace_period_in_mins">Grace Period (in minutes) :</string>
+    <string name="zero_value">0</string>
+    <string name="reset_passcode">Reset Passcode</string>
+
+    <string name="str_last_checkin_time">Last Checkin Time (in milliseconds) : </string>
+    <string name="str_last_checkin_date">Last Checkin Date : </string>
+
+    <string name="str_fetch_kerberos">Fetch Kerberos Token</string>
+    <string name="str_kerberos_url">Fetching Kerberos token for url : </string>
+    <string name="str_kerberos_token">Kerberos Token is </string>
+    <string name="str_kerberos_error">Error fetching the Kerberos Token!!</string>
+
+    <string name="str_fetch_certs">Fetch Certificates</string>
+    <string name="str_cert_issuer">Certificate IssuerID</string>
+    <string name="str_cert_token">Certificate Token</string>
+    <string name="str_cert_details">Certificate Details : </string>
+    <string name="str_cert_not_found">No Certificates found yet</string>
+    <string name="title_activity_sdkcert_web_view">SDKCertWebView</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="go">GO</string>
+    <string name="title_activity_sdkhttp_cert_based_auth">SDKHttpCertBasedAuth</string>
+    <string name="header">Enter your Https URL</string>
+    <string name="go_http_client">Go HttpClient</string>
+    <string name="go_http_url_connection">Go HttpsUrlConnection</string>
+
+    <string name="str_get_cert_keys">Get Certificate Keys</string>
+    <string name="str_cert_keys_found">Certificate Keys found : </string>
+    <string name="str_cert_keys_not_available">Certificate Keys not available.</string>
+
+    <string name="title_activity_main_landing">MainLandingActivity</string>
+    <string name="title_activity_client_sdk">AirWatch Client SDK</string>
+    <string name="title_activity_sdk_manager_apis">SDK Manager APIs</string>
+    <string name="title_activity_sdk_secure_app_info">Secure App Info</string>
+    <string name="title_activity_sdk_authentication">Authentication</string>
+    <string name="title_activity_sdk_passcode">Passcode</string>
+    <string name="title_activity_sdk_certificate_mgmt">Certificate Management</string>
+    <string name="title_activity_sdk_analytics">Analytics</string>
+    <string name="title_activity_sdk_clear_appdata_test">Clear App Data Test</string>
+    <string name="title_activity_sdk_sso_session_info">SSO Session Info</string>
+    <string name="title_activity_sdk_profile_group_updates">Profile Group Updates</string>
+    <string name="title_activity_sdk_factory_reset_device">Factory Reset Device</string>
+    <string name="title_activity_sdk_remove_profile">Remove Profile</string>
+    <string name="title_activity_sdk_reboot_device">Reboot Device</string>
+    <string name="title_activity_sdk_logging">Logging</string>
+    <string name="title_activity_sdk_app_public_key">App Public Key</string>
+    <string name="title_activity_sdk_application_configuration">Application Configuration</string>
+    <string name="title_activity_fram_work_main">FrameWorkMainActivity</string>
+    <string name="title_activity_privacy_main">Privacy Use Cases</string>
+    <string name="title_activity_fwkey_manager">FWKeyManager</string>
+    <string name="title_activity_fw_filekey_manager">FWFileKeyManager</string>
+    <string name="title_activity_fwsecure_preferences">FWSecurePreferences</string>
+    <string name="title_activity_fwmagweb_view">FWMAGWebView</string>
+    <string name="title_activity_fwmaghttp_clients">FWMAGHttpClients</string>
+    <string name="title_activity_splash_sdkservice_init">SplashSDKServiceInitActivity</string>
+    <string name="title_activity_sdkconfiguration_fetch">SDKConfigurationFetch</string>
+    <string name="title_activity_permission">Permission</string>
+    <string name="title_activity_framework_ui">Framework UI</string>
+    <string name="title_activity_ui_elements">UI Elements</string>
+    <string name="title_activity_airwatch_text_view_demo">AirWatch TextView Demo</string>
+    <string name="title_activity_airwatch_edit_text_demo">AirWatch EditText Demo</string>
+    <string name="title_activity_airwatch_auto_complete_text_view_demo">AirWatch AutoCompleteTextView Demo</string>
+    <string name="title_activity_airwatch_button_demo">AirWatch Button Demo</string>
+    <string name="title_activity_airwatch_check_box_demo">AirWatch CheckBox Demo</string>
+    <string name="title_activity_mutual_tls">Test Mutual TLS</string>
+    <string name="title_activity_app_permission">Test App Permission Info</string>
+
+    <string name="str_start_test">Go</string>
+    <string name="str_enter_url">Enter the Url.</string>
+    <string name="clear">Clear</string>
+    <string name="status">No status available.</string>
+    <string name="default_logs_text">No Logs to display.</string>
+    <string name="proxy_test_activity_title">Proxy</string>
+    <string name="title_activity_proxy_setting">Proxy Configuration</string>
+    <string name="logs_text">LOGS:</string>
+    <string name="title_activity_fwsdksecure_preferences">FWSDKSecurePreferences</string>
+    <string name="search_activity">Search</string>
+    <string name="title_activity_app_data_usage">AppDataUsage</string>
+
+    <string name="empty_list">No items to display</string>
+    <string name="title_activity_list_methods">List Methods</string>
+    <string name="title_activity_invoke_method">Invoke Method</string>
+    <string name="oem_method_response_alert_title">Response</string>
+    <string name="title_activity_network_utils_demo">Network Utils</string>
+    <string name="title_activity_proxy">Proxy AWWebView Demo</string>
+    <string name="title_activity_proxy2">Proxy Demo with AWBaseGatewayStatusListener</string>
+    <string name="request_all_permission_rationale">You have to accept all these permissions to use sample app</string>
+    <string name="lock_session">lock session</string>
+    <string name="enter_passcode_below">Enter passcode below</string>
+    <string name="generate_unique_id">Generate Unique ID</string>
+    <string name="generated_unique_id_is">Generated Unique ID is: </string>
+    <string name="unique_id">Device Unique IDv4</string>
+    <string name="fetching">Fetching unique ID</string>
+    <string name="no_unique_id_present">No unique ID stored</string>
+    <string name="passcode_required">Passcode is required</string>
+    <string name="get_unique_id">Get Unique ID</string>
+    <string name="has_unique_id">Has Unique ID</string>
+    <string name="clear_unique_id">Clear Unique ID</string>
+    <string name="enter_sender_id">Enter sender ID:</string>
+    <string name="register">Register</string>
+    <string name="push_notification">Send Push Notification</string>
+    <string name="message_for_push_notification">Message for push notification</string>
+
+    <string name="registration_id">Registration id: %s</string>
+    <string name="error_while_registering">Error while registering: %s</string>
+    <string name="title_activity_sslpinning_status">Admin Connectivity</string>
+    <string name="awsdk_main_page">Welcome to AirWatch Sample App, Please Select the Module to Continue</string>
+    <string name="awsdk_framework">AIRWATCH FRAMEWORK</string>
+    <string name="awsdk_clientsdk">AIRWATCH CLIENT SDK</string>
+    <string name="awsdk_privacy">AIRWATCH PRIVACY</string>
+
+    <!-- SampleApp NonCompliance Page -->
+    <string name="awsdk_nc_page">Your device does not meet compliance standards set by your admin.</string>
+    <string name="awsdk_nc_os_page">AndroidOsVersion</string>
+    <string name="awsdk_nc_spd">SecurityPatchDate</string>
+    <string name="awsdk_nc_generic">Compliance Policy</string>
+
+    <!-- SampleApp Settings Page -->
+    <string name="awsdk_menu_settings">Settings</string>
+    <string name="awsdk_check_for_updates">CHECK FOR UPDATES</string>
+    <string name="awsdk_remove_account">REMOVE ACCOUNT AND SERVICES</string>
+    <string name="awsdk_settings">Settings</string>
+    <string name="awsdk_available_apps">Available Apps</string>
+    <string name="awsdk_remove_account_message">Removing this account will also remove all managed services and apps from your device.</string>
+    <string name="awsdk_remove">REMOVE ACCOUNT</string>
+    <string name="awsdk_home">Home</string>
+
+</resources>

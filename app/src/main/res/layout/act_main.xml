@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Spinner
+            android:id="@+id/act_main_proxy_type_sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/spinner_shape" />
+
+        <Spinner
+            android:id="@+id/act_main_test_component_sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/spinner_shape" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/url_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:hint="@string/str_enter_url"
+            android:inputType="textUri" />
+
+        <Button
+            android:id="@+id/act_main_start_test_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/buttons_color"
+            android:padding="5dp"
+            android:text="@string/str_start_test"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+    </LinearLayout>
+	<TextView 
+	    android:id="@+id/text_status_code"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:textSize="20sp"
+	    android:singleLine="false"
+	    android:text="@string/status"/>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lyt_webview_holder"
+        android:background="@android:color/darker_gray" >
+
+        <com.airwatch.gateway.testapp.TestWebView
+            android:id="@+id/act_main_test_result_wv"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:background="@android:color/transparent" >
+        </com.airwatch.gateway.testapp.TestWebView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_popup" >
+
+        <Button
+            android:id="@+id/clear_logs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/buttons_color"
+            android:padding="5dp"
+            android:text="@string/clear"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/clear_logs"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:text="@string/logs_text"
+            android:textColor="@color/aw_blue"
+            android:textSize="20sp" />
+    </RelativeLayout>
+	
+    <ScrollView
+        android:id="@+id/logs_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="100"
+        android:background="@color/grey_popup" >
+
+        <TextView
+            android:id="@+id/logs_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/default_logs_text"
+            android:textColor="@android:color/black" />
+    </ScrollView>
+
+</LinearLayout>
